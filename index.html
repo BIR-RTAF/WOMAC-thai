@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOMAC Score Evaluation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WOMAC Score Evaluation</h1>
+        <form id="womacForm">
+            <h2>ส่วนที่ 1: ความปวด</h2>
+            <label>1.1 ความปวดขณะพักอยู่กับที่:</label>
+            <input type="radio" name="pain1" value="0"> ไม่ปวด
+            <input type="radio" name="pain1" value="1"> ปวดน้อย
+            <input type="radio" name="pain1" value="2"> ปวดกลาง
+            <input type="radio" name="pain1" value="3"> ปวดมาก
+            <input type="radio" name="pain1" value="4"> ปวดที่สุด
+            <br>
+            <button type="submit">คำนวณคะแนน</button>
+        </form>
+
+        <div id="result" style="display:none;">
+            <h2>ผลคะแนนของคุณ:</h2>
+            <p id="score"></p>
+            <p id="percentage"></p>
+            <p id="interpretation"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
