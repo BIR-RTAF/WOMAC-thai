@@ -1,54 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+box-sizing: border-box;
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+body {
+margin: 0;
+font-family: 'Open Sans', sans-serif;
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+color: #f0f4f8;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding: 40px 15px;
+}
+
+main {
+background: #ffffff22; /* โปร่งแสงสีขาว */
+border-radius: 12px;
+padding: 30px 40px;
+max-width: 480px;
+width: 100%;
+box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
-    text-align: center;
+margin-top: 0;
+font-weight: 700;
+font-size: 1.8rem;
+text-align: center;
+color: #dbe9ff;
+margin-bottom: 30px;
+text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+section + section {
+margin-top: 30px;
 }
 
 h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+font-size: 1.1rem;
+color: #b0c7ff;
+border-bottom: 1px solid #b0c7ff44;
+padding-bottom: 6px;
+margin-bottom: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+display: block;
+margin-bottom: 6px;
+font-weight: 600;
+color: #e1e8ffdd;
 }
 
-input[type="radio"] {
-    margin-right: 10px;
+select {
+width: 100%;
+padding: 8px 12px;
+border-radius: 6px;
+border: none;
+background-color: #a3b8ffcc;
+color: #10234b;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+select:focus {
+outline: none;
+background-color: #d4dbff;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
+margin-top: 30px;
+width: 100%;
+padding: 12px 0;
+border: none;
+border-radius: 8px;
+background-color: #3860f8;
+color: white;
+font-size: 1.2rem;
+font-weight: 700;
+cursor: pointer;
+box-shadow: 0 6px 12px #2243b6aa;
+transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+background-color: #2d4ac8;
 }
 
 #result {
-    margin-top: 20px;
+margin-top: 30px;
+background: #2a5298cc;
+border-radius: 8px;
+padding: 18px 25px;
+font-size: 1.2rem;
+font-weight: 600;
+color: #dbe9ff;
+text-align: center;
+user-select: none;
 }
