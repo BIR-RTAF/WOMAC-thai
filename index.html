@@ -1,41 +1,280 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WOMAC Score Evaluation</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WOMAC Pain & Function Assessment</title>
+<link
+href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+rel="stylesheet"
+/>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>WOMAC Score Evaluation</h1>
-        <form id="womacForm">
-            <h2>ส่วนที่ 1: ความปวด</h2>
-            <label>1.1 ความปวด "ขณะพักอยู่กับที่":</label>
-            <input type="radio" name="pain1" value="0"> ไม่ปวด
-            <input type="radio" name="pain1" value="1"> ปวดน้อย
-            <input type="radio" name="pain1" value="2"> ปวดกลาง
-            <input type="radio" name="pain1" value="3"> ปวดมาก
-            <input type="radio" name="pain1" value="4"> ปวดที่สุด
-            <br>
-            <label>1.2 ความปวด "ขณะยืนลงน้ำหนัก":</label>
-            <input type="radio" name="pain1" value="0"> ไม่ปวด
-            <input type="radio" name="pain1" value="1"> ปวดน้อย
-            <input type="radio" name="pain1" value="2"> ปวดกลาง
-            <input type="radio" name="pain1" value="3"> ปวดมาก
-            <input type="radio" name="pain1" value="4"> ปวดที่สุด
-            <br>
-            <button type="submit">คำนวณคะแนน</button>
-        </form>
+<main>
+<h1>แบบประเมิน WOMAC (Thai Version)</h1>
+<form id="womacForm">
+<!-- Section 1: ความปวด -->
+<section>
+<h2>1. ความปวด (คะแนน 0-4)</h2>
 
-        <div id="result" style="display:none;">
-            <h2>ผลคะแนนของคุณ:</h2>
-            <p id="score"></p>
-            <p id="percentage"></p>
-            <p id="interpretation"></p>
-        </div>
-    </div>
+<label for="pain-rest">1.1 ความปวดขณะพักอยู่กับที่</label>
+<select id="pain-rest" name="pain-rest" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ไม่ปวด</option>
+<option value="1">ปวดน้อย</option>
+<option value="2">ปวดกลาง</option>
+<option value="3">ปวดมาก</option>
+<option value="4">ปวดที่สุด</option>
+</select>
 
-    <script src="app.js"></script>
+<label for="pain-stand">1.2 ความปวดขณะยืนลงน้ำหนัก</label>
+<select id="pain-stand" name="pain-stand" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ไม่ปวด</option>
+<option value="1">ปวดน้อย</option>
+<option value="2">ปวดกลาง</option>
+<option value="3">ปวดมาก</option>
+<option value="4">ปวดที่สุด</option>
+</select>
+
+<label for="pain-walk">1.3 ความปวดขณะเดินทางราบ</label>
+<select id="pain-walk" name="pain-walk" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ไม่ปวด</option>
+<option value="1">ปวดน้อย</option>
+<option value="2">ปวดกลาง</option>
+<option value="3">ปวดมาก</option>
+<option value="4">ปวดที่สุด</option>
+</select>
+
+<label for="pain-stairs">1.4 ความปวดขณะขึ้นบันได</label>
+<select id="pain-stairs" name="pain-stairs" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ไม่ปวด</option>
+<option value="1">ปวดน้อย</option>
+<option value="2">ปวดกลาง</option>
+<option value="3">ปวดมาก</option>
+<option value="4">ปวดที่สุด</option>
+</select>
+
+<label for="pain-night">1.5 ความปวดช่วงกลางคืน</label>
+<select id="pain-night" name="pain-night" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ไม่ปวด</option>
+<option value="1">ปวดน้อย</option>
+<option value="2">ปวดกลาง</option>
+<option value="3">ปวดมาก</option>
+<option value="4">ปวดที่สุด</option>
+</select>
+</section>
+
+<!-- Section 2: อาการข้อติด -->
+<section>
+<h2>2. อาการข้อติด (คะแนน 0-4)</h2>
+
+<label for="stiffness-morning">2.1 ข้อติดในช่วงเช้า</label>
+<select id="stiffness-morning" name="stiffness-morning" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ไม่มี</option>
+<option value="1">มีเล็กน้อย</option>
+<option value="2">มีปานกลาง</option>
+<option value="3">มีมาก</option>
+<option value="4">ข้อติดตลอด</option>
+</select>
+
+<label for="stiffness-evening">2.2 ข้อติดในช่วงบ่ายหรือเย็น</label>
+<select id="stiffness-evening" name="stiffness-evening" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ไม่มี</option>
+<option value="1">มีเล็กน้อย</option>
+<option value="2">มีปานกลาง</option>
+<option value="3">มีมาก</option>
+<option value="4">ข้อติดตลอด</option>
+</select>
+</section>
+
+<!-- Section 3: ความยากในการทำกิจวัตร -->
+<section>
+<h2>3. ความยากในการทำกิจวัตร (คะแนน 0-4)</h2>
+
+<label for="difficulty-stairs-up">3.1 ขึ้นบันได</label>
+<select id="difficulty-stairs-up" name="difficulty-stairs-up" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-stairs-down">3.2 ลงบันได</label>
+<select id="difficulty-stairs-down" name="difficulty-stairs-down" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-bed-move">3.3 ขยับลงเตียงนอน</label>
+<select id="difficulty-bed-move" name="difficulty-bed-move" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-bed-getup">3.4 ลุกขึ้นจากเตียงนอน</label>
+<select id="difficulty-bed-getup" name="difficulty-bed-getup" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-toilet">3.5 เข้าห้องน้ำ</label>
+<select id="difficulty-toilet" name="difficulty-toilet" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-bath">3.6 อาบน้ำ</label>
+<select id="difficulty-bath" name="difficulty-bath" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-chair">3.7 นั่งเก้าอี้</label>
+<select id="difficulty-chair" name="difficulty-chair" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-kneel">3.8 นั่งคุกเข่า</label>
+<select id="difficulty-kneel" name="difficulty-kneel" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-stand-up">3.9 ลุกขึ้นยืน</label>
+<select id="difficulty-stand-up" name="difficulty-stand-up" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-stand-flat">3.10 ยืนบนพื้นราบ</label>
+<select id="difficulty-stand-flat" name="difficulty-stand-flat" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-walk-flat">3.11 เดินบนพื้นราบ</label>
+<select id="difficulty-walk-flat" name="difficulty-walk-flat" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-sock-put">3.12 ใส่ถุงเท้า</label>
+<select id="difficulty-sock-put" name="difficulty-sock-put" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-sock-takeoff">3.13 ถอดถุงเท้า</label>
+<select id="difficulty-sock-takeoff" name="difficulty-sock-takeoff" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-car">3.14 เข้า-ออกรถยนต์</label>
+<select id="difficulty-car" name="difficulty-car" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-shopping">3.15 เดินซื้อของ/จ่ายตลาด</label>
+<select id="difficulty-shopping" name="difficulty-shopping" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-light-housework">3.16 ทำงานบ้านเบาๆ</label>
+<select id="difficulty-light-housework" name="difficulty-light-housework" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+
+<label for="difficulty-heavy-housework">3.17 ทำงานบ้านหนักๆ</label>
+<select id="difficulty-heavy-housework" name="difficulty-heavy-housework" required>
+<option value="" disabled selected>เลือกคะแนน</option>
+<option value="0">ทำได้ปกติ</option>
+<option value="1">ยากเล็กน้อย</option>
+<option value="2">ยากปานกลาง</option>
+<option value="3">ยากมาก</option>
+<option value="4">ทำไม่ได้เลย</option>
+</select>
+</section>
+
+<button type="submit">คำนวณคะแนน</button>
+</form>
+
+<div id="result" aria-live="polite"></div>
+</main>
+
+<script src="scripts.js"></script>
 </body>
 </html>
