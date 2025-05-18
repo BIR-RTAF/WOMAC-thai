@@ -19,7 +19,7 @@ document.getElementById('womacForm').addEventListener('submit', function (e) {
     `คุณ ${fullName} ได้คะแนนรวม: ${totalScore} / ${maxScore} (${percent}%)`;
 
   // ส่งข้อมูลไป Google Sheets
-  fetch("https://script.google.com/macros/s/AKfycbzNTEDa4Wn0Cho191K-fVeEsxWyr1ILpJEPAYJZdunjLQo_0AYG3zS3s0ygt746jEAT/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbzoeMb9JaVEZ9TiyYcHpG3mqrDFcsi-sV2o3bDXF3P0TV3tzL2JZYUew3g8axS62QmIww/exec", {
     method: "POST",
     body: JSON.stringify({
       fullName,
