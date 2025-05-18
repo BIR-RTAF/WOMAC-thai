@@ -18,8 +18,8 @@ document.getElementById('womacForm').addEventListener('submit', function (e) {
   document.getElementById('result').textContent =
     `คุณ ${fullName} ได้คะแนนรวม: ${totalScore} / ${maxScore} (${percent}%)`;
 
-  // ส่งข้อมูลไป Google Sheets
-  fetch("https://script.google.com/macros/s/AKfycbwvURtdpEMmiDJ88x_kvwC0AhX85ycv0uPKeNWC3a1mH_3Z8-0HJmQ71G0e5VTw8fs/exec", {
+  // ส่งข้อมูลผ่าน CORS proxy ไปยัง Google Apps Script
+  fetch("https://corsproxy.io/?https://script.google.com/macros/s/AKfycbwvURtdpEMmiDJ88x_kvwC0AhX85ycv0uPKeNWC3a1mH_3Z8-0HJmQ71G0e5VTw8fs/exec", {
     method: "POST",
     body: JSON.stringify({
       fullName,
