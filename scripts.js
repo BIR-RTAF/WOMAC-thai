@@ -19,7 +19,7 @@ document.getElementById('result').textContent =
 `คุณ ${fullName} ได้คะแนนรวม: ${totalScore} / ${maxScore} (${percent}%)`;
 
 // === ส่งไป Google Sheets ===
-fetch("https://script.google.com/macros/s/AKfycbwjUOj9Ii9Eg74-kZS9W7qAsV5zK_b_qCgqdKjQT8n5Tl8N6LbDawRMARYf3mvsT5mqlQ/exec", {
+fetch("https://script.google.com/macros/s/AKfycbyykcZ3ZbWyBWDOxXkcvWsJADBc9bjrFAYSe2rMWAXWvHnRcixWxXYayqCjtsso9OCxTQ/exec", {
 method: "POST",
 body: JSON.stringify({
 fullName,
