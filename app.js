@@ -1,28 +1,32 @@
-document.getElementById("womacForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // ป้องกันการรีเฟรชหน้าเมื่อกด Submit
+document.getElementById('womacForm').addEventListener('submit', function(e) {
+e.preventDefault();
 
-    let totalScore = 0;
+const form = e.target;
 
-    // การคำนวณคะแนนจากคำถาม
-    const pain1 = document.querySelector('input[name="pain1"]:checked');
-    if (pain1) totalScore += parseInt(pain1.value);
+// รายชื่อฟิลด์ทั้งหมดตามคำถามครบ (34 ข้อ: 5 + 2 + 17)
+const fields = [
+'pain-rest', 'pain-stand', 'pain-walk', 'pain-stairs', 'pain-night',
+'stiffness-morning', 'stiffness-evening',
+'difficulty-stairs-up', 'difficulty-stairs-down', 'difficulty-bed-move',
+'difficulty-bed-getup', 'difficulty-toilet', 'difficulty-bath', 'difficulty-chair',
+'difficulty-kneel', 'difficulty-stand-up', 'difficulty-stand-flat', 'difficulty-walk-flat',
+'difficulty-sock-put', 'difficulty-sock-takeoff', 'difficulty-car', 'difficulty-shopping',
+'difficulty-light-housework', 'difficulty-heavy-housework'
+];
 
-    const maxScore = 96; // คะแนนสูงสุด
-    const percentage = (totalScore / maxScore) * 100;
+let totalScore = 0;
+let maxScore = 0;
 
-    // แสดงผลลัพธ์
-    document.getElementById("result").style.display = "block";
-    document.getElementById("score").textContent = "คะแนนรวม: " + totalScore + " / " + maxScore;
-    document.getElementById("percentage").textContent = "เปอร์เซ็นต์: " + percentage.toFixed(2) + "%";
+fields.forEach(id => {
+const val = parseInt(form[id].value);
+if (!isNaN(val)) {
+totalScore += val;
+maxScore += 4;
+}
+});
 
-    // คำอธิบายผลลัพธ์
-    let interpretation = "";
-    if (percentage < 20) {
-        interpretation = "ไม่มีอาการรุนแรง";
-    } else if (percentage < 50) {
-        interpretation = "มีอาการปานกลาง";
-    } else {
-        interpretation = "มีอาการรุนแรง";
-    }
-    document.getElementById("interpretation").textContent = interpretation;
+const percent = ((totalScore / maxScore) * 100).toFixed(2);
+
+const resultDiv = document.getElementById('result');
+resultDiv.textContent = `คะแนนรวม: ${totalScore} / ${maxScore} (${percent}%)`;
 });
