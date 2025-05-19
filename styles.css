@@ -25,3 +25,12 @@
   color: white;
   border-color: #1565c0;
 }
+
+/* ปรับขนาด input date ใหญ่ขึ้น */
+input[type="date"] {
+  width: 100%;
+  padding: 15px; /* เพิ่มขนาด padding */
+  font-size: 1.2rem; /* เพิ่มขนาดฟอนต์ */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
