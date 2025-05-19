@@ -20,13 +20,7 @@
   display: inline-block;  /* ให้ปุ่มเรียงกันในบรรทัดเดียว */
 }
 
-/* เมื่อ radio ถูกเลือกแล้ว ปรับสีพื้นหลัง */
-.options input[type="radio"]:checked + label {
-  color: white;
-  border-color: #1565c0;
-}
-
-/* ปรับขนาด input date ใหญ่ขึ้น */
+/* เพิ่มการแสดงผลสำหรับ input[type="date"] */
 input[type="date"] {
   width: 100%;
   padding: 15px; /* เพิ่มขนาด padding */
