@@ -12,6 +12,16 @@ document.getElementById('womacForm').addEventListener('submit', function (e) {
     maxScore += 4;
   });
 
-  const percent = ((totalScore / maxScore) * 100).toFixed(2);
-  document.getElementById('result').textContent = `คะแนนรวม: ${totalScore} / ${maxScore} (${percent}%)`;
+  // กำหนดระดับความรุนแรงตามคะแนนรวม
+  let severityLevel = "";
+  if (totalScore <= 15) {
+    severityLevel = "ระดับความรุนแรงน้อย";
+  } else if (totalScore > 15 && totalScore <= 40) {
+    severityLevel = "ระดับความรุนแรงปานกลาง";
+  } else if (totalScore > 40) {
+    severityLevel = "ระดับความรุนแรงมาก แนะนำรีบปรึกษาแพทย์เฉพาะทาง";
+  }
+
+  // แสดงผลลัพธ์
+  document.getElementById('result').textContent = `คะแนนรวม: ${totalScore} / ${maxScore} (${severityLevel})`;
 });
