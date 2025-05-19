@@ -22,28 +22,23 @@
 }
 
 /* เปลี่ยนสีปุ่มคำตอบตามคะแนนที่เลือก (0-4) */
-input[type="radio"][value="0"]:checked + label,
-input[type="radio"][value="0"]:not(:checked) + label {
+input[type="radio"][value="0"]:checked + label {
   background-color: #a5d6a7; /* สีฟ้า */
 }
 
-input[type="radio"][value="1"]:checked + label,
-input[type="radio"][value="1"]:not(:checked) + label {
+input[type="radio"][value="1"]:checked + label {
   background-color: #81c784; /* สีเขียว */
 }
 
-input[type="radio"][value="2"]:checked + label,
-input[type="radio"][value="2"]:not(:checked) + label {
+input[type="radio"][value="2"]:checked + label {
   background-color: #fff176; /* สีเหลือง */
 }
 
-input[type="radio"][value="3"]:checked + label,
-input[type="radio"][value="3"]:not(:checked) + label {
+input[type="radio"][value="3"]:checked + label {
   background-color: #ffb74d; /* สีส้ม */
 }
 
-input[type="radio"][value="4"]:checked + label,
-input[type="radio"][value="4"]:not(:checked) + label {
+input[type="radio"][value="4"]:checked + label {
   background-color: #e57373; /* สีแดง */
 }
 
