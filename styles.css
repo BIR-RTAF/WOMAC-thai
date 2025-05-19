@@ -59,31 +59,8 @@ h2 {
   gap: 10px;
 }
 .options label {
-  /* สีพื้นหลังเริ่มต้น (ยังไม่คลิก) */
-.options input[type="radio"][value="0"] {
-  background-color: #81d4fa; /* ฟ้าสบายตา */
-}
-
-.options input[type="radio"][value="1"] {
-  background-color: #66bb6a; /* เขียวสบายตา */
-  color: white;
-}
-
-.options input[type="radio"][value="2"] {
-  background-color: #fbc02d; /* เหลืองสบายตา */
-  color: #0d47a1;
-}
-
-.options input[type="radio"][value="3"] {
-  background-color: #ffb74d; /* ส้มสบายตา */
-  color: white;
-}
-
-.options input[type="radio"][value="4"] {
-  background-color: #e57373; /* แดงสบายตา */
-  color: white;
-}
-  
+  background-color: white;  /* สีพื้นหลังเริ่มต้น (ยังไม่คลิก) */
+  color: #0d47a1; /* สีตัวอักษร */
   border: 2px solid #90caf9;
   border-radius: 6px;
   padding: 8px 14px;
@@ -92,9 +69,33 @@ h2 {
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
+/* สีพื้นหลังเริ่มต้นตามคะแนน (ยังไม่คลิก) */
+.options input[type="radio"][value="0"] + label {
+  background-color: #81d4fa; /* ฟ้าสบายตา */
+}
+
+.options input[type="radio"][value="1"] + label {
+  background-color: #66bb6a; /* เขียวสบายตา */
+  color: white;
+}
+
+.options input[type="radio"][value="2"] + label {
+  background-color: #fbc02d; /* เหลืองสบายตา */
+  color: #0d47a1;
+}
+
+.options input[type="radio"][value="3"] + label {
+  background-color: #ffb74d; /* ส้มสบายตา */
+  color: white;
+}
+
+.options input[type="radio"][value="4"] + label {
+  background-color: #e57373; /* แดงสบายตา */
+  color: white;
+}
+
 /* เพิ่มสีเข้มขึ้นเมื่อคลิก (เมื่อเลือก radio) */
-.options input[type="radio"][value="0"]:checked + label,
-.options label:has(input[type="radio"]:checked) {
+.options input[type="radio"][value="0"]:checked + label {
   background-color: #1565c0;  /* ฟ้าเข้มขึ้น */
 }
 
