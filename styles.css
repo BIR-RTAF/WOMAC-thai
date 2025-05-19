@@ -37,12 +37,11 @@ h2 {
 
 /* ซ่อน input radio แต่ label ยังคงคลิกได้ */
 input[type="radio"] {
-  visibility: hidden; /* ซ่อน input radio */
+  visibility: hidden; /* ซ่อน input radio แต่ไม่ทำให้ label คลิกไม่ได้ */
 }
 
 /* กำหนดลักษณะของป้าย label */
 .options label {
-  background-color: #a5d6a7;  /* สีฟ้าเริ่มต้นพื้นหลัง */
   color: #0d47a1;
   border: 2px solid #ffffff;  /* กรอบสีขาว */
   border-radius: 6px;
@@ -101,7 +100,7 @@ input[type="radio"][value="4"]:checked + label {
 button {
   margin-top: 30px;
   width: 100%;
-  padding: 18px; /* ปรับขนาดให้สมส่วน */
+  padding: 14px; /* ปรับขนาดให้สมส่วน */
   border: none;
   border-radius: 8px;
   background-color: #0d47a1;
