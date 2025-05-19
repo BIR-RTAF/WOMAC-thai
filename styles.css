@@ -1,37 +1,9 @@
-/* เพิ่ม box-sizing เพื่อให้แสดงผลเหมือนกันในทุกอุปกรณ์ */
-* {
-  box-sizing: border-box;
-}
-
-/* กำหนดการแสดงผลของหน้า */
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: #e0f7fa;  /* สีฟ้าอ่อนสำหรับพื้นหลังเว็บทั้งหมด */
-  color: #2c3e50;
-  min-height: 100vh;
+/* ปรับการแสดงผลของปุ่มให้แสดงในบรรทัดเดียว */
+.options {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 15px;
-}
-
-main {
-  background: #ffffffcc;
-  border-radius: 12px;
-  padding: 30px 40px;
-  max-width: 900px;
-  width: 100%;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-}
-
-/* ปรับขนาดของ input date ใหญ่ขึ้น */
-input[type="date"] {
-  width: 100%;
-  padding: 15px; /* เพิ่มขนาด padding */
-  font-size: 1.2rem; /* เพิ่มขนาดฟอนต์ */
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
 }
 
 /* กำหนดลักษณะของป้าย label */
@@ -107,4 +79,12 @@ button:hover {
   color: #0d47a1;
   text-align: center;
   user-select: none;
+  white-space: pre-line;  /* ให้ผลลัพธ์แสดงในบรรทัดใหม่ */
+}
+
+#severity-level {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e57373;
 }
