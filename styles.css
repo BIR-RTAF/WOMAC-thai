@@ -1,13 +1,8 @@
-/* เพิ่ม box-sizing เพื่อให้แสดงผลเหมือนกันในทุกอุปกรณ์ */
-* {
-  box-sizing: border-box;
-}
-
-/* กำหนดการแสดงผลของหน้า */
+/* ปรับการแสดงผลของหน้าเว็บทั้งหมด */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff); /* สีฟ้าอ่อน */
+  background: #e0f7fa;  /* สีฟ้าอ่อนสำหรับพื้นหลังเว็บทั้งหมด */
   color: #2c3e50;
   min-height: 100vh;
   display: flex;
@@ -16,22 +11,14 @@ body {
   padding: 40px 15px;
 }
 
+/* ปรับพื้นหลังของ main ที่เป็นกล่องหลัก */
 main {
-  background: #ffffffcc;
+  background: #ffffffcc; /* ฟอนต์ขาวโปร่งแสง */
   border-radius: 12px;
   padding: 30px 40px;
   max-width: 900px;
   width: 100%;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-}
-
-/* ปรับขนาดของ input date ใหญ่ขึ้น */
-input[type="date"] {
-  width: 100%;
-  padding: 15px; /* เพิ่มขนาด padding */
-  font-size: 1.2rem; /* เพิ่มขนาดฟอนต์ */
-  border-radius: 6px;
-  border: 1px solid #ccc;
 }
 
 /* กำหนดลักษณะของป้าย label */
@@ -50,35 +37,61 @@ input[type="date"] {
 }
 
 /* เปลี่ยนสีปุ่มคำตอบตามคะแนนที่เลือก (0-4) */
-input[type="radio"][value="0"]:checked + label {
+input[type="radio"][value="0"]:checked + label,
+input[type="radio"][value="0"]:not(:checked) + label {
   background-color: #a5d6a7; /* สีฟ้า */
 }
 
-input[type="radio"][value="1"]:checked + label {
+input[type="radio"][value="1"]:checked + label,
+input[type="radio"][value="1"]:not(:checked) + label {
   background-color: #81c784; /* สีเขียว */
 }
 
-input[type="radio"][value="2"]:checked + label {
+input[type="radio"][value="2"]:checked + label,
+input[type="radio"][value="2"]:not(:checked) + label {
   background-color: #fff176; /* สีเหลือง */
 }
 
-input[type="radio"][value="3"]:checked + label {
+input[type="radio"][value="3"]:checked + label,
+input[type="radio"][value="3"]:not(:checked) + label {
   background-color: #ffb74d; /* สีส้ม */
 }
 
-input[type="radio"][value="4"]:checked + label {
+input[type="radio"][value="4"]:checked + label,
+input[type="radio"][value="4"]:not(:checked) + label {
   background-color: #e57373; /* สีแดง */
 }
 
-/* กำหนดสีของปุ่มเมื่อไม่ได้เลือก */
-input[type="radio"]:not(:checked) + label {
-  background-color: #e3f2fd; /* ฟ้าอ่อน */
+/* ปรับขนาดปุ่มคำนวณคะแนน */
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 18px; /* ปรับขนาดให้สมส่วน */
+  border: none;
+  border-radius: 8px;
+  background-color: #0d47a1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 12px #90caf9aa;
+  transition: background-color 0.3s ease;
 }
 
-/* ปรับการแสดงผลของปุ่มให้แสดงในบรรทัดเดียว */
-.options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
+button:hover {
+  background-color: #1565c0;
+}
+
+/* ปรับการแสดงผลของผลลัพธ์ */
+#result {
+  margin-top: 30px;
+  background: #e3f2fd;
+  border-left: 6px solid #2196f3;
+  border-radius: 6px;
+  padding: 18px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d47a1;
+  text-align: center;
+  user-select: none;
 }
