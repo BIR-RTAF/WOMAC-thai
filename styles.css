@@ -1,4 +1,9 @@
-/* ปรับการแสดงผลของหน้าเว็บทั้งหมด */
+/* เพิ่ม box-sizing เพื่อให้แสดงผลเหมือนกันในทุกอุปกรณ์ */
+* {
+  box-sizing: border-box;
+}
+
+/* กำหนดการแสดงผลของหน้า */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -11,14 +16,22 @@ body {
   padding: 40px 15px;
 }
 
-/* ปรับพื้นหลังของ main ที่เป็นกล่องหลัก */
 main {
-  background: #ffffffcc; /* ฟอนต์ขาวโปร่งแสง */
+  background: #ffffffcc;
   border-radius: 12px;
   padding: 30px 40px;
   max-width: 900px;
   width: 100%;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* ปรับขนาดของ input date ใหญ่ขึ้น */
+input[type="date"] {
+  width: 100%;
+  padding: 15px; /* เพิ่มขนาด padding */
+  font-size: 1.2rem; /* เพิ่มขนาดฟอนต์ */
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 /* กำหนดลักษณะของป้าย label */
