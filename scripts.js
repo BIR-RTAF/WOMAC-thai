@@ -15,11 +15,11 @@ document.getElementById('womacForm').addEventListener('submit', function (e) {
   // กำหนดระดับความรุนแรงตามคะแนนรวม
   let severityLevel = "";
   if (totalScore <= 15) {
-    severityLevel = "ระดับความรุนแรงน้อย";
+    severityLevel = "ข้อเข่าเสื่อมระดับความรุนแรงต่ำ";
   } else if (totalScore > 15 && totalScore <= 40) {
-    severityLevel = "ระดับความรุนแรงปานกลาง";
+    severityLevel = "ข้อเข่าเสื่อมระดับความรุนแรงปานกลาง";
   } else if (totalScore > 40) {
-    severityLevel = "ระดับความรุนแรงมาก แนะนำรีบปรึกษาแพทย์เฉพาะทาง";
+    severityLevel = "ข้อเข่าเสื่อมระดับความรุนแรงสูง";
   }
 
   // แสดงผลลัพธ์คะแนนรวม
