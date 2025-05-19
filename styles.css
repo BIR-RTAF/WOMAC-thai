@@ -20,6 +20,47 @@
   display: inline-block;  /* ให้ปุ่มเรียงกันในบรรทัดเดียว */
 }
 
+/* กำหนดสีตามคะแนน (0-4) */
+input[name="pain-rest"][value="0"] + label,
+input[name="pain-stand"][value="0"] + label,
+input[name="pain-walk"][value="0"] + label,
+input[name="pain-stairs"][value="0"] + label,
+input[name="pain-night"][value="0"] + label {
+  background-color: #a5d6a7; /* สีฟ้า */
+}
+
+input[name="pain-rest"][value="1"] + label,
+input[name="pain-stand"][value="1"] + label,
+input[name="pain-walk"][value="1"] + label,
+input[name="pain-stairs"][value="1"] + label,
+input[name="pain-night"][value="1"] + label {
+  background-color: #81c784; /* สีเขียว */
+}
+
+input[name="pain-rest"][value="2"] + label,
+input[name="pain-stand"][value="2"] + label,
+input[name="pain-walk"][value="2"] + label,
+input[name="pain-stairs"][value="2"] + label,
+input[name="pain-night"][value="2"] + label {
+  background-color: #fff176; /* สีเหลือง */
+}
+
+input[name="pain-rest"][value="3"] + label,
+input[name="pain-stand"][value="3"] + label,
+input[name="pain-walk"][value="3"] + label,
+input[name="pain-stairs"][value="3"] + label,
+input[name="pain-night"][value="3"] + label {
+  background-color: #ffb74d; /* สีส้ม */
+}
+
+input[name="pain-rest"][value="4"] + label,
+input[name="pain-stand"][value="4"] + label,
+input[name="pain-walk"][value="4"] + label,
+input[name="pain-stairs"][value="4"] + label,
+input[name="pain-night"][value="4"] + label {
+  background-color: #e57373; /* สีแดง */
+}
+
 /* เพิ่มการแสดงผลสำหรับ input[type="date"] */
 input[type="date"] {
   width: 100%;
