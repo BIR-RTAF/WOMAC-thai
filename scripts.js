@@ -23,6 +23,7 @@ document.getElementById('womacForm').addEventListener('submit', function (e) {
   }
 
   // แสดงผลลัพธ์คะแนนรวมและระดับความรุนแรง
-  const resultText = `คะแนนรวม: ${totalScore} / ${maxScore} (${severityLevel})`;
+  const resultText = `คะแนนรวม: ${totalScore} / ${maxScore}`;
   document.getElementById('result').textContent = resultText;  // แสดงผลใน #result
+  document.getElementById('severity-level').textContent = severityLevel;  // แสดงระดับความรุนแรงใน #severity-level
 });
