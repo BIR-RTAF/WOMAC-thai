@@ -1,34 +1,4 @@
-/* เพิ่มเติมเพื่อให้ background ของหน้ามีสีตามเดิม */
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);  /* background เดิม */
-  color: #2c3e50;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 15px;
-}
-
-main {
-  background: #ffffffcc; /* เปลี่ยนเป็น background แบบโปร่งแสง */
-  border-radius: 12px;
-  padding: 30px 40px;
-  max-width: 900px;
-  width: 100%;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-}
-
-/* ปรับการแสดงผลของปุ่มให้แสดงในบรรทัดเดียว */
-.options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
-}
-
-/* สไตล์ของ label */
+/* ปรับการแสดงผลสีของปุ่มตาม class ที่เพิ่ม */
 .options label {
   background-color: white;
   color: #0d47a1;
@@ -42,9 +12,25 @@ main {
   display: inline-block;
 }
 
+/* เพิ่มสีสำหรับ class ที่กำหนด */
+.color-0 {
+  background-color: #a5d6a7; /* สีฟ้า */
+}
+.color-1 {
+  background-color: #81c784; /* สีเขียว */
+}
+.color-2 {
+  background-color: #fff176; /* สีเหลือง */
+}
+.color-3 {
+  background-color: #ffb74d; /* สีส้ม */
+}
+.color-4 {
+  background-color: #e57373; /* สีแดง */
+}
+
 /* เมื่อมีการเลือก radio button สีจะเปลี่ยน */
 .options input[type="radio"]:checked + label {
-  background-color: #1565c0;
   color: white;
   border-color: #1565c0;
 }
