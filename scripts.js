@@ -11,7 +11,7 @@ document.getElementById('womacForm').addEventListener('submit', function (e) {
     totalScore += parseInt(radio.value);
     maxScore += 4;
 
-    // เปลี่ยนสีของปุ่มโดยการใช้ class
+    // เปลี่ยนสีของปุ่มคำตอบตามคะแนนที่เลือก
     const label = radio.nextElementSibling;  // หาป้าย label ที่อยู่ถัดจาก radio button
     label.style.backgroundColor = "";  // รีเซ็ตสีพื้นหลังเก่า
 
@@ -35,7 +35,6 @@ document.getElementById('womacForm').addEventListener('submit', function (e) {
     }
   });
 
-  // คำนวณคะแนนรวมและแสดงผล
   const percent = ((totalScore / maxScore) * 100).toFixed(2);
   document.getElementById('result').textContent = `คะแนนรวม: ${totalScore} / ${maxScore} (${percent}%)`;
 });
