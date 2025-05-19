@@ -1,64 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
-  color: #2c3e50;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 15px;
-}
-
-main {
-  background: #ffffffcc;
-  border-radius: 12px;
-  padding: 30px 40px;
-  max-width: 900px;
-  width: 100%;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  margin-top: 0;
-  font-weight: 700;
-  font-size: 1.8rem;
-  text-align: center;
-  color: #0d47a1;
-  margin-bottom: 30px;
-}
-
-h2 {
-  font-size: 1.1rem;
-  color: #1565c0;
-  border-bottom: 1px solid #90caf9;
-  padding-bottom: 6px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-}
-
-.question {
-  margin-bottom: 30px;
-}
-
-.question p {
-  font-weight: 600;
-  color: #1a237e;
-  margin-bottom: 10px;
-}
-
-.options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
+/* Add colors for the different score ranges */
 .options label {
   background-color: white;
   color: #0d47a1;
@@ -68,47 +8,37 @@ h2 {
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.2s, color 0.2s;
+  display: inline-block;  /* Ensures labels are in a row */
+  font-size: 0.9rem;  /* Reduced size for compact display */
 }
 
-.options input[type="radio"] {
-  display: none;
-}
-
-.options input[type="radio"]:checked + label,
-.options label:has(input[type="radio"]:checked) {
+.options input[type="radio"]:checked + label {
   background-color: #1565c0;
   color: white;
   border-color: #1565c0;
 }
 
-button {
-  margin-top: 30px;
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  background-color: #0d47a1;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 6px 12px #90caf9aa;
-  transition: background-color 0.3s ease;
+/* Specific button colors based on the score */
+input[type="radio"][value="0"]:checked + label {
+  background-color: #a5d6a7; /* Light Blue */
+}
+input[type="radio"][value="1"]:checked + label {
+  background-color: #81c784; /* Green */
+}
+input[type="radio"][value="2"]:checked + label {
+  background-color: #fff176; /* Yellow */
+}
+input[type="radio"][value="3"]:checked + label {
+  background-color: #ffb74d; /* Orange */
+}
+input[type="radio"][value="4"]:checked + label {
+  background-color: #e57373; /* Red */
 }
 
-button:hover {
-  background-color: #1565c0;
-}
-
-#result {
-  margin-top: 30px;
-  background: #e3f2fd;
-  border-left: 6px solid #2196f3;
-  border-radius: 6px;
-  padding: 18px 25px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #0d47a1;
-  text-align: center;
-  user-select: none;
+/* Adjust spacing and alignment for compactness */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
 }
