@@ -1,67 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
-  color: #2c3e50;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 15px;
-}
-
-main {
-  background: #ffffffcc;
-  border-radius: 12px;
-  padding: 30px 40px;
-  max-width: 900px;
-  width: 100%;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  margin-top: 0;
-  font-weight: 700;
-  font-size: 1.8rem;
-  text-align: center;
-  color: #0d47a1;
-  margin-bottom: 30px;
-}
-
-h2 {
-  font-size: 1.1rem;
-  color: #1565c0;
-  border-bottom: 1px solid #90caf9;
-  padding-bottom: 6px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-}
-
-.question {
-  margin-bottom: 30px;
-}
-
-.question p {
-  font-weight: 600;
-  color: #1a237e;
-  margin-bottom: 10px;
-}
-
-.options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .options label {
   background-color: white;
-  color: #0d47a1;
+  color: #0d47a1; /* สีเริ่มต้น */
   border: 2px solid #90caf9;
   border-radius: 6px;
   padding: 8px 14px;
@@ -70,47 +9,42 @@ h2 {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.options input[type="radio"] {
-  display: none;
-}
-
-.options input[type="radio"]:checked + label,
-.options label:has(input[type="radio"]:checked) {
-  background-color: #1565c0;
-  color: white;
-  border-color: #1565c0;
-}
-
-button {
-  margin-top: 30px;
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  background-color: #0d47a1;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 6px 12px #90caf9aa;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #1565c0;
-}
-
-#result {
-  margin-top: 30px;
-  background: #e3f2fd;
-  border-left: 6px solid #2196f3;
-  border-radius: 6px;
-  padding: 18px 25px;
-  font-size: 1.2rem;
-  font-weight: 600;
+/* เปลี่ยนสีของ label ตามคะแนน */
+.options input[type="radio"][value="0"]:checked + label {
+  background-color: #81d4fa; /* ฟ้าสบายตา */
   color: #0d47a1;
-  text-align: center;
-  user-select: none;
+  border-color: #81d4fa;
 }
-styles.css
-Displaying index.html.
+
+.options input[type="radio"][value="1"]:checked + label {
+  background-color: #66bb6a; /* เขียวสบายตา */
+  color: white;
+  border-color: #66bb6a;
+}
+
+.options input[type="radio"][value="2"]:checked + label {
+  background-color: #fbc02d; /* เหลืองสบายตา */
+  color: #0d47a1;
+  border-color: #fbc02d;
+}
+
+.options input[type="radio"][value="3"]:checked + label {
+  background-color: #ffb74d; /* ส้มสบายตา */
+  color: white;
+  border-color: #ffb74d;
+}
+
+.options input[type="radio"][value="4"]:checked + label {
+  background-color: #e57373; /* แดงสบายตา */
+  color: white;
+  border-color: #e57373;
+}
+
+/* เพิ่มสีเข้มขึ้นเมื่อทำการคลิก */
+.options input[type="radio"]:checked + label {
+  background-color: darken(#81d4fa, 10%); /* ปรับสีเข้มขึ้น */
+  background-color: darken(#66bb6a, 10%);
+  background-color: darken(#fbc02d, 10%);
+  background-color: darken(#ffb74d, 10%);
+  background-color: darken(#e57373, 10%);
+}
