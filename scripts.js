@@ -1,5 +1,5 @@
 document.getElementById('womacForm').addEventListener('submit', function (e) {
-  e.preventDefault();
+  e.preventDefault();  // หยุดการส่งฟอร์ม
   const form = e.target;
   const radioFields = form.querySelectorAll('input[type="radio"]:checked');
 
