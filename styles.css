@@ -8,9 +8,9 @@
 
 /* กำหนดลักษณะของป้าย label */
 .options label {
-  background-color: white;
+  background-color: #e3f2fd;  /* สีฟ้าอ่อนพื้นหลัง */
   color: #0d47a1;
-  border: 2px solid #90caf9;
+  border: 2px solid #ffffff;  /* กรอบสีขาว */
   border-radius: 6px;
   padding: 8px 14px;
   cursor: pointer;
@@ -18,14 +18,34 @@
   transition: background-color 0.2s, color 0.2s;
   font-size: 0.9rem;  /* ขนาดปุ่มเล็กลง */
   display: inline-block;  /* ให้ปุ่มเรียงกันในบรรทัดเดียว */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* เงาเบาๆ เพื่อให้ดูน่าสนใจ */
 }
 
-/* กำหนดสีตามคะแนน (0-4) */
+/* กำหนดสีของปุ่มคำตอบในแต่ละคำถามตามค่าคะแนน (0-4) */
 input[name="pain-rest"][value="0"] + label,
 input[name="pain-stand"][value="0"] + label,
 input[name="pain-walk"][value="0"] + label,
 input[name="pain-stairs"][value="0"] + label,
-input[name="pain-night"][value="0"] + label {
+input[name="pain-night"][value="0"] + label,
+input[name="stiffness-morning"][value="0"] + label,
+input[name="stiffness-evening"][value="0"] + label,
+input[name="difficulty-stairs-up"][value="0"] + label,
+input[name="difficulty-stairs-down"][value="0"] + label,
+input[name="difficulty-bed-move"][value="0"] + label,
+input[name="difficulty-bed-getup"][value="0"] + label,
+input[name="difficulty-toilet"][value="0"] + label,
+input[name="difficulty-bath"][value="0"] + label,
+input[name="difficulty-chair"][value="0"] + label,
+input[name="difficulty-kneel"][value="0"] + label,
+input[name="difficulty-stand-up"][value="0"] + label,
+input[name="difficulty-stand-flat"][value="0"] + label,
+input[name="difficulty-walk-flat"][value="0"] + label,
+input[name="difficulty-sock-put"][value="0"] + label,
+input[name="difficulty-sock-takeoff"][value="0"] + label,
+input[name="difficulty-car"][value="0"] + label,
+input[name="difficulty-shopping"][value="0"] + label,
+input[name="difficulty-light-housework"][value="0"] + label,
+input[name="difficulty-heavy-housework"][value="0"] + label {
   background-color: #a5d6a7; /* สีฟ้า */
 }
 
@@ -33,7 +53,26 @@ input[name="pain-rest"][value="1"] + label,
 input[name="pain-stand"][value="1"] + label,
 input[name="pain-walk"][value="1"] + label,
 input[name="pain-stairs"][value="1"] + label,
-input[name="pain-night"][value="1"] + label {
+input[name="pain-night"][value="1"] + label,
+input[name="stiffness-morning"][value="1"] + label,
+input[name="stiffness-evening"][value="1"] + label,
+input[name="difficulty-stairs-up"][value="1"] + label,
+input[name="difficulty-stairs-down"][value="1"] + label,
+input[name="difficulty-bed-move"][value="1"] + label,
+input[name="difficulty-bed-getup"][value="1"] + label,
+input[name="difficulty-toilet"][value="1"] + label,
+input[name="difficulty-bath"][value="1"] + label,
+input[name="difficulty-chair"][value="1"] + label,
+input[name="difficulty-kneel"][value="1"] + label,
+input[name="difficulty-stand-up"][value="1"] + label,
+input[name="difficulty-stand-flat"][value="1"] + label,
+input[name="difficulty-walk-flat"][value="1"] + label,
+input[name="difficulty-sock-put"][value="1"] + label,
+input[name="difficulty-sock-takeoff"][value="1"] + label,
+input[name="difficulty-car"][value="1"] + label,
+input[name="difficulty-shopping"][value="1"] + label,
+input[name="difficulty-light-housework"][value="1"] + label,
+input[name="difficulty-heavy-housework"][value="1"] + label {
   background-color: #81c784; /* สีเขียว */
 }
 
@@ -41,7 +80,26 @@ input[name="pain-rest"][value="2"] + label,
 input[name="pain-stand"][value="2"] + label,
 input[name="pain-walk"][value="2"] + label,
 input[name="pain-stairs"][value="2"] + label,
-input[name="pain-night"][value="2"] + label {
+input[name="pain-night"][value="2"] + label,
+input[name="stiffness-morning"][value="2"] + label,
+input[name="stiffness-evening"][value="2"] + label,
+input[name="difficulty-stairs-up"][value="2"] + label,
+input[name="difficulty-stairs-down"][value="2"] + label,
+input[name="difficulty-bed-move"][value="2"] + label,
+input[name="difficulty-bed-getup"][value="2"] + label,
+input[name="difficulty-toilet"][value="2"] + label,
+input[name="difficulty-bath"][value="2"] + label,
+input[name="difficulty-chair"][value="2"] + label,
+input[name="difficulty-kneel"][value="2"] + label,
+input[name="difficulty-stand-up"][value="2"] + label,
+input[name="difficulty-stand-flat"][value="2"] + label,
+input[name="difficulty-walk-flat"][value="2"] + label,
+input[name="difficulty-sock-put"][value="2"] + label,
+input[name="difficulty-sock-takeoff"][value="2"] + label,
+input[name="difficulty-car"][value="2"] + label,
+input[name="difficulty-shopping"][value="2"] + label,
+input[name="difficulty-light-housework"][value="2"] + label,
+input[name="difficulty-heavy-housework"][value="2"] + label {
   background-color: #fff176; /* สีเหลือง */
 }
 
@@ -49,7 +107,26 @@ input[name="pain-rest"][value="3"] + label,
 input[name="pain-stand"][value="3"] + label,
 input[name="pain-walk"][value="3"] + label,
 input[name="pain-stairs"][value="3"] + label,
-input[name="pain-night"][value="3"] + label {
+input[name="pain-night"][value="3"] + label,
+input[name="stiffness-morning"][value="3"] + label,
+input[name="stiffness-evening"][value="3"] + label,
+input[name="difficulty-stairs-up"][value="3"] + label,
+input[name="difficulty-stairs-down"][value="3"] + label,
+input[name="difficulty-bed-move"][value="3"] + label,
+input[name="difficulty-bed-getup"][value="3"] + label,
+input[name="difficulty-toilet"][value="3"] + label,
+input[name="difficulty-bath"][value="3"] + label,
+input[name="difficulty-chair"][value="3"] + label,
+input[name="difficulty-kneel"][value="3"] + label,
+input[name="difficulty-stand-up"][value="3"] + label,
+input[name="difficulty-stand-flat"][value="3"] + label,
+input[name="difficulty-walk-flat"][value="3"] + label,
+input[name="difficulty-sock-put"][value="3"] + label,
+input[name="difficulty-sock-takeoff"][value="3"] + label,
+input[name="difficulty-car"][value="3"] + label,
+input[name="difficulty-shopping"][value="3"] + label,
+input[name="difficulty-light-housework"][value="3"] + label,
+input[name="difficulty-heavy-housework"][value="3"] + label {
   background-color: #ffb74d; /* สีส้ม */
 }
 
@@ -57,7 +134,26 @@ input[name="pain-rest"][value="4"] + label,
 input[name="pain-stand"][value="4"] + label,
 input[name="pain-walk"][value="4"] + label,
 input[name="pain-stairs"][value="4"] + label,
-input[name="pain-night"][value="4"] + label {
+input[name="pain-night"][value="4"] + label,
+input[name="stiffness-morning"][value="4"] + label,
+input[name="stiffness-evening"][value="4"] + label,
+input[name="difficulty-stairs-up"][value="4"] + label,
+input[name="difficulty-stairs-down"][value="4"] + label,
+input[name="difficulty-bed-move"][value="4"] + label,
+input[name="difficulty-bed-getup"][value="4"] + label,
+input[name="difficulty-toilet"][value="4"] + label,
+input[name="difficulty-bath"][value="4"] + label,
+input[name="difficulty-chair"][value="4"] + label,
+input[name="difficulty-kneel"][value="4"] + label,
+input[name="difficulty-stand-up"][value="4"] + label,
+input[name="difficulty-stand-flat"][value="4"] + label,
+input[name="difficulty-walk-flat"][value="4"] + label,
+input[name="difficulty-sock-put"][value="4"] + label,
+input[name="difficulty-sock-takeoff"][value="4"] + label,
+input[name="difficulty-car"][value="4"] + label,
+input[name="difficulty-shopping"][value="4"] + label,
+input[name="difficulty-light-housework"][value="4"] + label,
+input[name="difficulty-heavy-housework"][value="4"] + label {
   background-color: #e57373; /* สีแดง */
 }
 
