@@ -131,8 +131,14 @@ button:hover {
 }
 
 #severity-level {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  font-weight: 500;
+  margin-top: 30px;
+  background: #e3f2fd;
+  border-left: 6px solid #2196f3;
+  border-radius: 6px;
+  padding: 18px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #e57373;
+  text-align: center;
+  user-select: none;
 }
