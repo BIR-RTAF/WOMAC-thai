@@ -1,27 +1,55 @@
-/* ปรับการแสดงผลของปุ่มให้แสดงในบรรทัดเดียว */
-.options {
+/* เพิ่ม box-sizing เพื่อให้แสดงผลเหมือนกันในทุกอุปกรณ์ */
+* {
+  box-sizing: border-box;
+}
+
+/* กำหนดการแสดงผลของหน้า */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff); /* สีฟ้าอ่อน */
+  color: #2c3e50;
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 15px;
+}
+
+main {
+  background: #ffffffcc;
+  border-radius: 12px;
+  padding: 30px 40px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* ปรับขนาดของ input date ใหญ่ขึ้น */
+input[type="date"] {
+  width: 100%;
+  padding: 15px; /* เพิ่มขนาด padding */
+  font-size: 1.2rem; /* เพิ่มขนาดฟอนต์ */
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 /* กำหนดลักษณะของป้าย label */
 .options label {
-  background-color: #e3f2fd;  /* สีฟ้าอ่อนพื้นหลังเริ่มต้น */
+  background-color: #e3f2fd;  /* สีฟ้าอ่อนพื้นหลัง */
   color: #0d47a1;
   border: 2px solid #ffffff;  /* กรอบสีขาว */
   border-radius: 6px;
   padding: 12px 18px;  /* เพิ่มขนาด padding */
   cursor: pointer;
   font-weight: 500;
-  transition: background-color 0.3s ease, color 0.3s ease; /* เพิ่ม transition เพื่อให้การเปลี่ยนสีดูเนียนขึ้น */
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 1rem;  /* ขนาดปุ่มที่เหมาะสม */
   display: inline-block;  /* ให้ปุ่มเรียงกันในบรรทัดเดียว */
   user-select: none; /* ป้องกันการเลือกข้อความ */
 }
 
-/* เปลี่ยนสีตามค่าคะแนนที่เลือก (0-4) */
+/* เปลี่ยนสีปุ่มคำตอบตามคะแนนที่เลือก (0-4) */
 input[type="radio"][value="0"]:checked + label {
   background-color: #a5d6a7; /* สีฟ้า */
 }
@@ -42,11 +70,15 @@ input[type="radio"][value="4"]:checked + label {
   background-color: #e57373; /* สีแดง */
 }
 
-/* เพิ่มการแสดงผลสำหรับ input[type="date"] */
-input[type="date"] {
-  width: 100%;
-  padding: 15px; /* เพิ่มขนาด padding */
-  font-size: 1.2rem; /* เพิ่มขนาดฟอนต์ */
-  border-radius: 6px;
-  border: 1px solid #ccc;
+/* กำหนดสีของปุ่มเมื่อไม่ได้เลือก */
+input[type="radio"]:not(:checked) + label {
+  background-color: #e3f2fd; /* ฟ้าอ่อน */
+}
+
+/* ปรับการแสดงผลของปุ่มให้แสดงในบรรทัดเดียว */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
 }
