@@ -6,7 +6,7 @@
 /* กำหนดการแสดงผลของหน้า */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff); /* สีฟ้าอ่อนพื้นหลัง */
+  background: #e0f7fa;  /* สีฟ้าอ่อนสำหรับพื้นหลังเว็บทั้งหมด */
   color: #2c3e50;
   min-height: 100vh;
   display: flex;
@@ -35,26 +35,27 @@ h2 {
   padding-bottom: 10px;
 }
 
-/* ซ่อน input radio เพื่อไม่ให้แสดง */
+/* ซ่อน input radio แต่ label ยังคงคลิกได้ */
 input[type="radio"] {
-  visibility: hidden; /* ซ่อน input แต่ไม่ทำให้ label คลิกไม่ได้ */
+  visibility: hidden; /* ซ่อน input radio */
 }
 
 /* กำหนดลักษณะของป้าย label */
 .options label {
+  background-color: #a5d6a7;  /* สีฟ้าเริ่มต้นพื้นหลัง */
   color: #0d47a1;
-  border: 2px solid #90caf9;
+  border: 2px solid #ffffff;  /* กรอบสีขาว */
   border-radius: 6px;
-  padding: 8px 14px;
+  padding: 12px 18px;  /* เพิ่มขนาด padding */
   cursor: pointer;
   font-weight: 500;
-  transition: background-color 0.2s, color 0.2s;
-  font-size: 1rem; /* ขนาดปุ่มที่เหมาะสม */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;  /* ขนาดปุ่มที่เหมาะสม */
   display: inline-block;  /* ให้ปุ่มเรียงกันในบรรทัดเดียว */
   user-select: none; /* ป้องกันการเลือกข้อความ */
 }
 
-/* สีของป้าย label ตั้งแต่เริ่มต้นตามคะแนน (0-4) */
+/* กำหนดสีของป้าย label ตั้งแต่เริ่มต้นตามคะแนน (0-4) */
 input[type="radio"][value="0"]:not(:checked) + label {
   background-color: #a5d6a7; /* สีฟ้า */
 }
@@ -77,30 +78,30 @@ input[type="radio"][value="4"]:not(:checked) + label {
 
 /* เปลี่ยนสีเมื่อคลิกเลือกคำตอบ */
 input[type="radio"][value="0"]:checked + label {
-  background-color: #a5d6a7; /* สีฟ้า */
+  background-color: #81c784; /* สีเขียวเข้ม */
 }
 
 input[type="radio"][value="1"]:checked + label {
-  background-color: #81c784; /* สีเขียว */
+  background-color: #66bb6a; /* สีเขียวเข้ม */
 }
 
 input[type="radio"][value="2"]:checked + label {
-  background-color: #fff176; /* สีเหลือง */
+  background-color: #fdd835; /* สีเหลืองเข้ม */
 }
 
 input[type="radio"][value="3"]:checked + label {
-  background-color: #ffb74d; /* สีส้ม */
+  background-color: #ff9800; /* สีส้มเข้ม */
 }
 
 input[type="radio"][value="4"]:checked + label {
-  background-color: #e57373; /* สีแดง */
+  background-color: #d32f2f; /* สีแดงเข้ม */
 }
 
 /* ปรับขนาดปุ่มคำนวณคะแนน */
 button {
   margin-top: 30px;
   width: 100%;
-  padding: 14px;
+  padding: 18px; /* ปรับขนาดให้สมส่วน */
   border: none;
   border-radius: 8px;
   background-color: #0d47a1;
