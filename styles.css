@@ -9,35 +9,50 @@
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
-/* เปลี่ยนสีของ label ตามคะแนน */
-.options input[type="radio"][value="0"]:checked + label {
+/* สีพื้นหลังเริ่มต้น (ยังไม่คลิก) */
+.options input[type="radio"][value="0"] + label {
   background-color: #81d4fa; /* ฟ้าสบายตา */
+}
+
+.options input[type="radio"][value="1"] + label {
+  background-color: #66bb6a; /* เขียวสบายตา */
+  color: white;
+}
+
+.options input[type="radio"][value="2"] + label {
+  background-color: #fbc02d; /* เหลืองสบายตา */
   color: #0d47a1;
-  border-color: #81d4fa;
+}
+
+.options input[type="radio"][value="3"] + label {
+  background-color: #ffb74d; /* ส้มสบายตา */
+  color: white;
+}
+
+.options input[type="radio"][value="4"] + label {
+  background-color: #e57373; /* แดงสบายตา */
+  color: white;
+}
+
+/* เพิ่มสีเข้มขึ้นเมื่อคลิก (เมื่อเลือก radio) */
+.options input[type="radio"][value="0"]:checked + label {
+  background-color: #1565c0;  /* ฟ้าเข้มขึ้น */
 }
 
 .options input[type="radio"][value="1"]:checked + label {
-  background-color: #66bb6a; /* เขียวสบายตา */
-  color: white;
-  border-color: #66bb6a;
+  background-color: #388e3c;  /* เขียวเข้มขึ้น */
 }
 
 .options input[type="radio"][value="2"]:checked + label {
-  background-color: #fbc02d; /* เหลืองสบายตา */
-  color: #0d47a1;
-  border-color: #fbc02d;
+  background-color: #f57f17;  /* เหลืองเข้มขึ้น */
 }
 
 .options input[type="radio"][value="3"]:checked + label {
-  background-color: #ffb74d; /* ส้มสบายตา */
-  color: white;
-  border-color: #ffb74d;
+  background-color: #f57c00;  /* ส้มเข้มขึ้น */
 }
 
 .options input[type="radio"][value="4"]:checked + label {
-  background-color: #e57373; /* แดงสบายตา */
-  color: white;
-  border-color: #e57373;
+  background-color: #d32f2f;  /* แดงเข้มขึ้น */
 }
 
 /* เปลี่ยนสีเมื่อ hover เมื่อไม่ได้เลือก */
