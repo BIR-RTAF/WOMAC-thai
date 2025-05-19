@@ -40,27 +40,6 @@
   border-color: #e57373;
 }
 
-/* เพิ่มสีเข้มขึ้นเมื่อคลิก */
-.options input[type="radio"][value="0"]:checked + label {
-  background-color: #1565c0;  /* สำหรับคะแนน 0 ฟ้าเข้มขึ้น */
-}
-
-.options input[type="radio"][value="1"]:checked + label {
-  background-color: #388e3c;  /* สำหรับคะแนน 1 เขียวเข้มขึ้น */
-}
-
-.options input[type="radio"][value="2"]:checked + label {
-  background-color: #f57f17;  /* สำหรับคะแนน 2 เหลืองเข้มขึ้น */
-}
-
-.options input[type="radio"][value="3"]:checked + label {
-  background-color: #f57c00;  /* สำหรับคะแนน 3 ส้มเข้มขึ้น */
-}
-
-.options input[type="radio"][value="4"]:checked + label {
-  background-color: #d32f2f;  /* สำหรับคะแนน 4 แดงเข้มขึ้น */
-}
-
 /* เปลี่ยนสีเมื่อ hover เมื่อไม่ได้เลือก */
 .options label:hover {
   opacity: 0.8; /* เปลี่ยนความโปร่งใสเพื่อให้เด่นเมื่อ hover */
