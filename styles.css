@@ -100,17 +100,36 @@ button:hover {
   background-color: #1565c0;
 }
 
-#result {
-  margin-top: 3%;
-  background: #e3f2fd;
-  border-left: 6px solid #2196f3;
-  border-radius: 6px;
-  padding: 18px 25px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #0d47a1;
+#result, #severity-level {
+  margin-top: 30px;
+  background: #e3f2fd;  /* ฟ้าสบายตา */
+  border-left: 6px solid #2196f3;  /* สีน้ำเงินเด่น */
+  border-radius: 8px;
+  padding: 20px 25px;
+  font-size: 1.5rem;  /* ขนาดฟอนต์ที่ใหญ่ขึ้น */
+  font-weight: 700;  /* ตัวหนา */
+  color: #0d47a1;  /* สีน้ำเงินเข้ม */
   text-align: center;
   user-select: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* เงาเพื่อเพิ่มมิติ */
+  transition: all 0.3s ease;
+}
+
+#result {
+  background: #c8e6c9;  /* สีเขียวสบายตา */
+  border-left: 6px solid #66bb6a;  /* สีเขียวเข้ม */
+}
+
+#severity-level {
+  background: #fff3e0;  /* สีส้มอ่อน */
+  border-left: 6px solid #ffb74d;  /* สีส้ม */
+}
+
+/* เปลี่ยนพื้นหลังและขนาดของข้อความเมื่อ hover */
+#result:hover, #severity-level:hover {
+  background: #b2ebf2;  /* สีฟ้าเข้มขึ้น */
+  color: white;
+  cursor: pointer;
 }
 
 /* Media Queries for Responsiveness */
@@ -172,7 +191,35 @@ button:hover {
     padding: 12px;
   }
 
-  #result {
-    font-size: 0.9rem;
-  }
+  #result, #severity-level {
+  margin-top: 30px;
+  background: #e3f2fd;  /* ฟ้าสบายตา */
+  border-left: 6px solid #2196f3;  /* สีน้ำเงินเด่น */
+  border-radius: 8px;
+  padding: 20px 25px;
+  font-size: 1.5rem;  /* ขนาดฟอนต์ที่ใหญ่ขึ้น */
+  font-weight: 700;  /* ตัวหนา */
+  color: #0d47a1;  /* สีน้ำเงินเข้ม */
+  text-align: center;
+  user-select: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* เงาเพื่อเพิ่มมิติ */
+  transition: all 0.3s ease;
+}
+
+#result {
+  background: #c8e6c9;  /* สีเขียวสบายตา */
+  border-left: 6px solid #66bb6a;  /* สีเขียวเข้ม */
+}
+
+#severity-level {
+  background: #fff3e0;  /* สีส้มอ่อน */
+  border-left: 6px solid #ffb74d;  /* สีส้ม */
+}
+
+/* เปลี่ยนพื้นหลังและขนาดของข้อความเมื่อ hover */
+#result:hover, #severity-level:hover {
+  background: #b2ebf2;  /* สีฟ้าเข้มขึ้น */
+  color: white;
+  cursor: pointer;
+}
 }
