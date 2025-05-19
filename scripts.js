@@ -22,8 +22,10 @@ document.getElementById('womacForm').addEventListener('submit', function (e) {
     severityLevel = "ระดับความรุนแรงมาก แนะนำรีบปรึกษาแพทย์เฉพาะทาง";
   }
 
-  // แสดงผลลัพธ์คะแนนรวมและระดับความรุนแรง
+  // แสดงผลลัพธ์คะแนนรวม
   const resultText = `คะแนนรวม: ${totalScore} / ${maxScore}`;
   document.getElementById('result').textContent = resultText;  // แสดงผลใน #result
-  document.getElementById('severity-level').textContent = severityLevel;  // แสดงระดับความรุนแรงใน #severity-level
+
+  // แสดงผลระดับความรุนแรงใน #severity-level
+  document.getElementById('severity-level').textContent = severityLevel;
 });
