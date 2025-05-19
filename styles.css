@@ -1,4 +1,12 @@
-/* ปรับการแสดงผลสีของปุ่มตาม class ที่เพิ่ม */
+/* ปรับการแสดงผลของปุ่มให้แสดงในบรรทัดเดียว */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+/* กำหนดลักษณะของป้าย label */
 .options label {
   background-color: white;
   color: #0d47a1;
@@ -8,28 +16,11 @@
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.2s, color 0.2s;
-  font-size: 0.9rem; /* ขนาดปุ่มที่เล็กลง */
-  display: inline-block;
+  font-size: 0.9rem;  /* ขนาดปุ่มเล็กลง */
+  display: inline-block;  /* ให้ปุ่มเรียงกันในบรรทัดเดียว */
 }
 
-/* เพิ่มสีสำหรับ class ที่กำหนด */
-.color-0 {
-  background-color: #a5d6a7; /* สีฟ้า */
-}
-.color-1 {
-  background-color: #81c784; /* สีเขียว */
-}
-.color-2 {
-  background-color: #fff176; /* สีเหลือง */
-}
-.color-3 {
-  background-color: #ffb74d; /* สีส้ม */
-}
-.color-4 {
-  background-color: #e57373; /* สีแดง */
-}
-
-/* เมื่อมีการเลือก radio button สีจะเปลี่ยน */
+/* เมื่อ radio ถูกเลือกแล้ว ปรับสีพื้นหลัง */
 .options input[type="radio"]:checked + label {
   color: white;
   border-color: #1565c0;
